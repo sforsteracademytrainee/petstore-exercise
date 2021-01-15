@@ -45,8 +45,13 @@
             </div>
             <div class="col-md">
                 <div class="form-floating">
-                    <input type="text" id="petStatus" name="petStatus" class="form-control" placeholder="Pet status" required/>
-                    <label for="petStatus">Pet status:</label>
+                    <label for="createStatus">Status of this pet?</label>
+                    <select class="form-select" id="createStatus" name="category" required>
+                        <option>Available</option>
+                        <option>Pending</option>
+                        <option>Sold</option>
+                        <option selected disabled>Please Select:</option>
+                    </select>
                 </div>
             </div>
         </div>

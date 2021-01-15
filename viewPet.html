@@ -7,6 +7,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <a href="index.html" class="navbar-brand">Pet store</a>
+        <button class="btn" type="button" data-bs-toggle="collapse" href="#togglethis">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="togglethis">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="viewPet.html">View pet</a>
+                </li>
+                <li class="nav-item">
+                    <a href="updatepet.html">Update pet</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Delete.html">Delete pet</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
     <div class="container" id="petsbyID">
         <div class="row">
             <div class="col-md">
@@ -16,7 +36,7 @@
             <button class="btn btn-dark" id="viewPetsByID">View Pets by ID</button>
         </div>
     </div>
-</br>
+    </br>
     <div class="container" id="petsbyStatus">
         <div class="row">
             <div class="col-md">
@@ -28,10 +48,11 @@
                 </select>
             </div>
             <button class="btn btn-dark" id="viewPetsByStatus">View Pets by Status</button>
-            <button class="btn btn-primary" id="clear" onclick="clear();">Clear</button>
+            <br>
+            <button class="btn btn-primary" id="clear">Clear</button>
         </div>
     </div>
-</br>
+    </br>
     <div class="text-center" id="petsDisplay"></div>
 
 

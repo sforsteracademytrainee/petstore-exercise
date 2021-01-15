@@ -3,6 +3,7 @@ const petID = document.querySelector("#petID");
 const status = document.querySelector("#status");
 const viewPetsByStatus = document.querySelector("#viewPetsByStatus");
 const petsDisplay = document.querySelector("#petsDisplay");
+const clearData = document.querySelector("#clear");
 
 
 const viewPetByID = () =>
@@ -77,3 +78,4 @@ const clear = () =>
 
 viewPetsByID.addEventListener('click', viewPetByID);
 viewPetsByStatus.addEventListener(`click`, viewPetByStatus);
+clearData.addEventListener("click", clear);
