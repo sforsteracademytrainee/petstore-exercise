@@ -2,20 +2,22 @@
 
 const createBtn = document.querySelector("#create");
 const createName = document.querySelector('#createName');
+const createCat = document.querySelector('#createCategory');
 const createStatus = document.querySelector('#createStatus');
 
 const create = () => {
-    const nameValue = updateName.value;
-    const statusValue = updateStatus.value;
+    const nameValue = createName.value;
+    const statusValue = createStatus.value;
+    const catValue = createCat.value;
     fetch(`https://petstore.swagger.io/v2/pet/`, {
         method: 'POST',
         body: JSON.stringify({
             "id": 0,
             "category": {
                 "id": 1,
-                "name": nameValue
+                "name": catValue
                 },
-            "name": "doggie",
+            "name": nameValue,
             "photoUrls": [
                 "string"
             ],
