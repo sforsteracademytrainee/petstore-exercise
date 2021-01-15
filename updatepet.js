@@ -12,8 +12,6 @@ const getFields = () => {
 
 const updatePet = () => {
     let [id, name, status] = getFields();
-
-    
     //console.log(id, name, status);
     fetch("https://petstore.swagger.io/v2/pet", {
         method: "PUT",
@@ -36,7 +34,7 @@ const updatePet = () => {
             "status": status
         }),
         headers: {
-            "Content-type": "application-json; charset=UTF-8",
+            "Content-type": "application/json; charset=UTF-8",
         },
     })
     .then((response) => response.json())
