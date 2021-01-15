@@ -13,7 +13,6 @@ const create = () => {
     const statusValue = createStatus.value;
     const catValue = createCat.value;
     const imageURL = createImage.value;
-    console.log(imageURL);
     let catID;
     switch(catValue){
         case("Dog"):
