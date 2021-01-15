@@ -4,11 +4,14 @@ const createBtn = document.querySelector("#create");
 const createName = document.querySelector('#createName');
 const createCat = document.querySelector('#createCategory');
 const createStatus = document.querySelector('#createStatus');
+const createImage = document.querySelector('#image')
 
 const create = () => {
     const nameValue = createName.value;
     const statusValue = createStatus.value;
     const catValue = createCat.value;
+    const imageURL = createImage.value;
+    console.log(imageURL);
     let catID;
     switch(catValue){
         case("Dog"):
@@ -33,9 +36,7 @@ const create = () => {
                 "name": catValue
                 },
             "name": nameValue,
-            "photoUrls": [
-                "string"
-            ],
+            "photoUrls": [imageURL],
             "tags": [
                 {
                     "id": 0,
@@ -49,7 +50,7 @@ const create = () => {
         }
     }).then(response => response.json())
         .then(json => console.log(json))
-        .catch(err => console.error("whoops"))
+        .catch(err => console.error("Data could not be updated"))
 }
 
 
