@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pet store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">Pet Store</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" href="#togglethis">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="togglethis">
+        <ul>
+        <li class="nav-item">
+        
+            <a href="Create.html" class="nav-link">Create</a>
+        </li>
+        <li class="nav-item">
+        
+            <a href="Read.html" class="nav-link">Read</a>
+        </li>
+        <li class="nav-item">
+        
+            <a href="Update.html" class="nav-link">Update</a>
+
+            <a href="Delete.html" class="nav-link">Delete</a>
+        </li>
+        <li class="nav-item">
+            </li>
+        
+        </ul>
+        </div>
+            </nav>
+            <br>
+            <div class="row">
+                <input type="number" id="toDelete" placeholder="Enter a number to delete"/>
+                
+                <div class="col-md">
+                    <br>
+                    <button type="Delete" class="btn btn-info" onclick="deletePet();"> Delete </button>
+                </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="delete.js"></script>
+</body>
+</html>
