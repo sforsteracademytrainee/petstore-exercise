@@ -11,15 +11,29 @@
 
 
 
-    <div class="container" id="pets">
+    <div class="container" id="petsbyID">
         <div class="row">
             <div class="col-md">
                 <input type="number" class="form-control" id="petID" 
                 placeholder="Pet ID:" name="petID"/>
             </div>
-            <button class="btn btn-dark" id="viewPets">View Pets by ID</button>
+            <button class="btn btn-dark" id="viewPetsByID">View Pets by ID</button>
+        </div>
     </div>
-
+    <div class="container" id="petsbyStatus">
+        <div class="row">
+            <div class="col-md">
+                <select class="form-select" id="status">
+                    <option selected>Choose a pet status:</option>
+                    <option value = "available">Available</option>
+                    <option value = "pending">Pending</option>
+                    <option value = "sold">Sold</option>
+                </select>
+            </div>
+            <button class="btn btn-dark" id="viewPetsByStatus">View Pets by Status</button>
+        </div>
+    </div>
+    <div id="pets"></div>
 
 
 
