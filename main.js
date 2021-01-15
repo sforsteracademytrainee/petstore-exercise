@@ -9,12 +9,27 @@ const create = () => {
     const nameValue = createName.value;
     const statusValue = createStatus.value;
     const catValue = createCat.value;
+    let catID;
+    switch(catValue){
+        case("Dog"):
+            catID = 1;
+            break;
+        case("Cat"):
+            catID = 2;
+            break;
+        case("Rabbit"):
+            catID = 3;
+            break;
+        case("Bird"):
+            catID = 4;
+            break;
+    }
     fetch(`https://petstore.swagger.io/v2/pet/`, {
         method: 'POST',
         body: JSON.stringify({
-            "id": 0,
+            "id": 1,
             "category": {
-                "id": 1,
+                "id": catID,
                 "name": catValue
                 },
             "name": nameValue,
