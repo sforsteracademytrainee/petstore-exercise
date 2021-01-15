@@ -1,9 +1,10 @@
 const viewPets = document.querySelector("#viewPets");
-const petID = document.querySelector("petID");
+const petID = document.querySelector("#petID");
 
 const viewPetByID = () =>
 {
-    fetch(`https://petstore.swagger.io/v2/pet/1`)
+    const petIDValue = petID.value;
+    fetch(`https://petstore.swagger.io/v2/pet/${petIDValue}`)
     .then((response) =>
     {
         console.log(response);
@@ -19,9 +20,10 @@ const viewPetByID = () =>
                 {
                     console.log(json);
                     console.log(json.data);
-                    console.log("Pet Found");
                 })
         }
     })
     .catch(err => console.error(`Stop! ${err}`));
 }
+
+viewPets.addEventListener('click', viewPetByID);
