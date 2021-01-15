@@ -10,6 +10,14 @@ const getFields = () => {
     return [Number.parseInt(idBox.value), nameBox.value, statusBox.value];
 }
 
+const printOutput = (message) => {
+    output.innerHTML = "";
+    let p = document.createElement("p");
+    let text = document.createTextNode(message);
+    p.appendChild(text);
+    output.appendChild(p);
+}
+
 const updatePet = () => {
     let [id, name, status] = getFields();
     //console.log(id, name, status);
@@ -37,8 +45,17 @@ const updatePet = () => {
             "Content-type": "application/json; charset=UTF-8",
         },
     })
-    .then((response) => response.json())
-    .then((json) => {
-        console.log(json);
+    .then((response) => {
+        if (response.status === 200) { // on successful query
+            return response.json();
+        } else if (response.status === 400) {
+            printOutput("Invalid pet ID.");
+        } else if (response.status === 404) {
+            printOutput("Pet not found.")
+        } else if (response.status === 405) {
+            printOutput("Validation exception.");
+        }
     })
+    .then((json) => printOutput("Successfully update pet of id " + json.id 
+        + " with name " + json.name + " and status " + json.status))
 }
