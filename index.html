@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
+
 <body>
     <nav class="navbar navbar-light bg-light">
         <a href="index.html" class="navbar-brand">Pet store</a>
@@ -38,7 +39,7 @@
                 </div>
             </div>
             <div class="col-md">
-                <label for="gender">Type of Pet:</label>
+                <label for="createCategory">Type of Pet:</label>
                 <select class="form-select" id="createCategory" name="category" required>
                     <option>Dog</option>
                     <option>Cat</option>
@@ -48,22 +49,29 @@
                 </select>
             </div>
         </div>
-        <br/><br/>
+        <br /><br />
         <div class="row">
             <div class="col-md">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="createStatus" placeholder="status">
-                    <label for="createStatus">Status of this pet?</label>
-                </div>
+                <label for="createStatus">Status of this pet?</label>
+                <select class="form-select" id="createStatus" name="category" required>
+                    <option>Available</option>
+                    <option>Pending</option>
+                    <option>Sold</option>
+                    <option selected disabled>Please Select:</option>
+                </select>
             </div>
+        </div>
+        <br /><br />
+        <div class="row">
             <div class="col-md">
+                <label for="image">Please add an image of the pet:</label>
                 <input type="file" id="image">
             </div>
+            <br />
             <div class="col-md">
                 <button class="btn btn-info" id="create"> Create </button>
             </div>
         </div>
-    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
