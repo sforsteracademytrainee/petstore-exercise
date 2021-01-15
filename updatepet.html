@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pet store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a href="index.html" class="navbar-brand">Pet store</a>
+        <button class="btn" type="button" data-bs-toggle="collapse" href="#togglethis">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="togglethis">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="updatepet.html">Update pet</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <h2 class="text-center">Update pet details</h2>
+    <br>
+    <div id="petDetails" class="container">
+        <div class="row">
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="number" id="petId" name="petId" class="form-control" placeholder="Pet ID" required/>
+                    <label for="petId">Pet ID:</label>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" id="petName" name="petName" class="form-control" placeholder="Pet name" required/>
+                    <label for="petName">Pet name:</label>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" id="petStatus" name="petStatus" class="form-control" placeholder="Pet status" required/>
+                    <label for="petStatus">Pet status:</label>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row text-center">
+            <div class="col-md">
+                <button class="btn btn-primary" onClick="updatePet();">Submit</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md">
+                <div id="output"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="updatepet.js"></script>
+</body>
+</html>
