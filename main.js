@@ -6,6 +6,7 @@ const createName = document.querySelector('#createName');
 const createCat = document.querySelector('#createCategory');
 const createStatus = document.querySelector('#createStatus');
 const createImage = document.querySelector('#image')
+const createFeedback = document.querySelector('#feedback')
 
 const create = () => {
     const nameValue = createName.value;
@@ -50,9 +51,14 @@ const create = () => {
             'Content-type': 'application/json; charset=utf8'
         }
     }).then(response => response.json())
-        .then(json => console.log(json))
+        .then(json => console.log(json), output("Pet Created"))
         .catch(err => console.error("Data could not be updated"))
 }
 
-
+const output = (message) => {
+    let p = document.createElement("p");
+    let feedback = document.createTextNode(message);
+    p.appendChild(feedback);
+    createFeedback.appendChild(p);
+}
 createBtn.addEventListener('click', create);
