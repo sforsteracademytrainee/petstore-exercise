@@ -1,8 +1,8 @@
 const viewPetsByID = document.querySelector("#viewPetsByID");
 const petID = document.querySelector("#petID");
-const pets = document.querySelector("#pets");
 const status = document.querySelector("#status");
 const viewPetsByStatus = document.querySelector("#viewPetsByStatus");
+const petsDisplay = document.querySelector("#petsDisplay");
 
 
 const viewPetByID = () =>
@@ -23,16 +23,12 @@ const viewPetByID = () =>
             response.json().then(json =>
                 {
                     console.log(json);
-                    // for (let i = 0; i < json.length; i++)
-                    // {
-                    //     let p = document.createElement("p");
-                    //     p.className = "pets";
+                    let p = document.createElement("p");
+                    p.className = "pets";
 
-                    //     let info = document.createTextNode(json[i].name);
-
-                    //     p.appendChild(info);
-                    //     pets.appendChild(p);
-                    // }
+                    let info = document.createTextNode(`Name: ${json[petIDValue].name}`)
+                    p.appendChild(info);
+                    petsDisplay.appendChild(p);
                     
                 })
         }
