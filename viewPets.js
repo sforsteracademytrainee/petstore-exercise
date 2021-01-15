@@ -26,7 +26,7 @@ const viewPetByID = () =>
                     let p = document.createElement("p");
                     p.className = "pets";
 
-                    let info = document.createTextNode(`Name: ${json[petIDValue].name}`)
+                    let info = document.createTextNode(`ID : ${json.id}  Name: ${json.name}  Status: ${json.status}`)
                     p.appendChild(info);
                     petsDisplay.appendChild(p);
                     
@@ -54,8 +54,15 @@ const viewPetByStatus = () =>
             response.json().then(json =>
                 {
                     console.log(json);
-                    console.log(json.data);
-                    let p = document.createElement("p");
+                    for(let i = 0; i <json.length; i++)
+                    {
+                        let p = document.createElement("p");
+                        p.className = "pets";
+
+                        let info = document.createTextNode(`ID : ${json[i].id}  Name: ${json[i].name}  Status: ${json[i].status}`)
+                        p.appendChild(info);
+                        petsDisplay.appendChild(p);
+                    }
                     
                 })
         }
