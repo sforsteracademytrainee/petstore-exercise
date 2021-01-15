@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Pet store</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar navbar-light bg-light">
@@ -20,8 +22,47 @@
             </ul>
         </div>
     </nav>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <div class="container">
+        <hr />
+        <div class="row">
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="createName" placeholder="name">
+                    <label for="createName">Name of this pet?</label>
+                </div>
+            </div>
+            <div class="col-md">
+                <label for="gender">Type of Pet:</label>
+                <select class="form-select" id="createCategory" name="category" required>
+                    <option>Dog</option>
+                    <option>Cat</option>
+                    <option>Rabbit</option>
+                    <option>Bird</option>
+                    <option selected disabled>Please Select:</option>
+                </select>
+            </div>
+        </div>
+        <br/><br/>
+        <div class="row">
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="createStatus" placeholder="status">
+                    <label for="createStatus">Status of this pet?</label>
+                </div>
+            </div>
+            <div class="col-md">
+                <input type="file" id="image">
+            </div>
+            <div class="col-md">
+                <button class="btn btn-info" id="create"> Create </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
+
 </html>
