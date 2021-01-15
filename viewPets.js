@@ -70,5 +70,10 @@ const viewPetByStatus = () =>
     .catch(err => console.error(`Stop! ${err}`));
 }
 
+const clear = () =>
+{
+    petsDisplay.innerHTML = "";
+}
+
 viewPetsByID.addEventListener('click', viewPetByID);
 viewPetsByStatus.addEventListener(`click`, viewPetByStatus);
